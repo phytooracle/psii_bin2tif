@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Author : emmanuelgonzalez
+Author : Emmanuel Gonzalez
 Date   : 2020-08-20
-Purpose: Rock the Casbah
+Purpose: Convert PSII bin files to TIFF images
 """
 
 import argparse
@@ -12,8 +12,6 @@ import datetime
 import logging
 from typing import Optional
 import numpy as np
-from PIL import Image
-from matplotlib import pyplot as plt
 import json
 import glob
 
@@ -54,7 +52,7 @@ def get_args():
 
 # --------------------------------------------------
 def main():
-    """Make a jazz noise here"""
+    """Read each bin file and convert to TIFF format"""
 
     args = get_args()
     start_timestamp = datetime.datetime.utcnow()
