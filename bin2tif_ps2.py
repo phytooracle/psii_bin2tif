@@ -80,8 +80,8 @@ def get_boundingbox(metadata):
     # img_width = int(meta['sensor_fixed_metadata']['camera resolution'].split('x')[1])
 
     B = gantry_z
-    A_x = np.arctan((0.5*float(fov_x))/0.8)#2)
-    A_y = np.arctan((0.5*float(fov_y))/0.8)#2)
+    A_x = np.arctan((0.5*float(fov_x))/2)
+    A_y = np.arctan((0.5*float(fov_y))/2)
     L_x = 2*B*np.tan(A_x)
     L_y = 2*B*np.tan(A_y)
 
@@ -94,14 +94,14 @@ def get_boundingbox(metadata):
     bbox_se_latlon = scanalyzer_to_latlon(x_s, y_e)
 
     # TERRA-REF
-    lon_shift = 0.000020308287
+    #lon_shift = 0.000020308287
 
     # Drone
-    lat_shift = 0.000018292 #0.000015258894
-    b_box =  ( bbox_se_latlon[0] - lat_shift,
-                bbox_nw_latlon[0] - lat_shift,
-                bbox_nw_latlon[1] + lon_shift,
-                bbox_se_latlon[1] + lon_shift )
+    #lat_shift = 0.000018292 #0.000015258894
+    b_box =  ( bbox_se_latlon[0], #- lat_shift,
+                bbox_nw_latlon[0], #- lat_shift,
+                bbox_nw_latlon[1], #+ lon_shift,
+                bbox_se_latlon[1]) #+ lon_shift )
 
     return b_box
 
