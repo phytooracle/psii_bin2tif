@@ -11,8 +11,8 @@ All bin files in the input directory converted to geotiff format.
     * **Directory containing bin files:** 'dir'
 * **Required Arguments:**
     * **Cleaned metadata file:** '-m', '--metadata'
+    * **Z-Axis offset:** '-z', '-zoffset'
 * **Optional Arguments:**
-    * **Z-Axis offset:** '-z', '-zoffset', default = 0.76
     * **TIF output directory:** '-o', '--outdir', default = 'bin2tif_out'
        
 ## Adapting the Script
