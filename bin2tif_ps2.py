@@ -45,8 +45,8 @@ def get_args():
                         '--zoffset',
                         help='Z-axis offset',
                         metavar='z-offset',
-                        type=int,
-                        default=0.76)
+                        type=float,
+                        required=True)# Check with gantry operator for correct height for specified season
 
     parser.add_argument('-o',
                         '--outdir',
