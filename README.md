@@ -1,7 +1,7 @@
 # PSii Bin to Tif
 This script converts BIN files to GeoTIFF images for photosystem II (PSII) sensors.
 
-Note that image height and width are collected from the provided metadata, including:
+Note that image height and width are hardcoded:
 
 ```
     img_width, img_height = 1216, 1936
